@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Component
 public class APILoggingInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("User: " + request.getHeader("User"));
+        System.out.println("User: " + request.getHeader("User-agent"));
         return true;
     }
 
